@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cys8fct4d1c15"]
+
+[ext_resource type="Texture2D" uid="uid://k8cwl0gb2tg8" path="res://assets/Sprites/tilemap/tilemap.png" id="1_v30as"]
+
+[node name="Heart" type="Sprite2D" unique_id=26402319]
+texture = ExtResource("1_v30as")
+region_enabled = true
+region_rect = Rect2(78, 41, 14, 12)

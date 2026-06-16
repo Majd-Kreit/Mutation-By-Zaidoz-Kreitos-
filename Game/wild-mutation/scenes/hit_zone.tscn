@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bosjvhvngg75t"]
+
+[ext_resource type="Script" uid="uid://dmvb7u7xffpl5" path="res://scripts/hit_zone.gd" id="1_icm5t"]
+
+[node name="HitZone" type="Area2D" unique_id=18151119]
+script = ExtResource("1_icm5t")
+
+[node name="Timer" type="Timer" parent="." unique_id=1776595896]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

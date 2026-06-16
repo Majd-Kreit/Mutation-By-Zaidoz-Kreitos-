@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cougm1pqdqfuh"]
+
+[ext_resource type="Script" uid="uid://c8bejxec1cg2r" path="res://scripts/water.gd" id="1_31a6i"]
+
+[node name="water" type="Area2D" unique_id=1307850056]
+position = Vector2(2, 0)
+script = ExtResource("1_31a6i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

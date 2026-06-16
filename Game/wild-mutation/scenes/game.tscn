@@ -1,0 +1,380 @@
+[gd_scene format=3 uid="uid://dk45uc522l57x"]
+
+[ext_resource type="Texture2D" uid="uid://k8cwl0gb2tg8" path="res://assets/Sprites/tilemap/tilemap.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://byx6wni2qryk5" path="res://scenes/kill_zone.tscn" id="2_p57ef"]
+[ext_resource type="PackedScene" uid="uid://bucdf6etfju5b" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://d20ba87xddb00" path="res://scenes/Water/top_water.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ckibwvp0ye3nl" path="res://scenes/Water/down_water.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bur2n4be10y0p" path="res://scenes/enemy.tscn" id="5_iywne"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
+texture = ExtResource("1_uwrxv")
+margins = Vector2i(2, 2)
+separation = Vector2i(5, 5)
+texture_region_size = Vector2i(14, 14)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lnu2h"]
+tile_size = Vector2i(14, 14)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_yqjtg")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u5sy4"]
+distance = 17.0
+
+[node name="game" type="Node2D" unique_id=1831054653]
+
+[node name="GameManager" type="Node" parent="." unique_id=1866895757]
+
+[node name="TileMap" type="TileMap" parent="GameManager" unique_id=181462441]
+tile_set = SubResource("TileSet_lnu2h")
+format = 2
+layer_0/name = "Ground"
+layer_0/z_index = 7
+layer_0/tile_data = PackedInt32Array(-2, 0, 0, -1, 65536, 0, -65536, 131072, 0, -65535, 196608, 0, -65534, 0, 0, -65533, 65536, 0, -65532, 131072, 0, -65531, 196608, 0, -65530, 0, 0, -65528, 131072, 0, -65529, 0, 0, -65527, 131072, 0, -65525, 131072, 0, -65523, 196608, 0, -65526, 65536, 0, -65524, 196608, 0, 65534, 262144, 0, 131070, 262144, 1, 65535, 327680, 0, 131071, 327680, 1, 0, 262144, 0, 11, 327680, 1, 65547, 262144, 1, 12, 327680, 1, 65548, 327680, 1, 13, 327680, 1, 9, 327680, 1, 65545, 262144, 1, 10, 327680, 0, 65546, 327680, 1, 7, 262144, 0, 65543, 262144, 0, 8, 262144, 0, 65544, 327680, 1, 5, 393216, 0, 65541, 262144, 1, 6, 327680, 0, 65542, 262144, 0, 3, 262144, 1, 65539, 327680, 1, 4, 262144, 1, 65540, 327680, 1, 65536, 262144, 1, 1, 327680, 0, 65537, 327680, 1, 2, 262144, 1, 65538, 262144, 1, 65549, 262144, 1, -65518, 0, 1, -65517, 65536, 0, -65516, 131072, 0, -65515, 196608, 0, -65514, 196608, 0, 18, 262144, 0, 19, 327680, 0, 20, 262144, 0, 21, 327680, 0, 22, 327680, 0, 65558, 327680, 0, 65557, 327680, 0, 65555, 327680, 1, 65556, 327680, 1, 65554, 327680, 1, 196606, 262144, 0, 196607, 262144, 0, 131072, 262144, 0, 131073, 262144, 0, 131074, 262144, 0, 131075, 262144, 0, 131076, 262144, 0, 131077, 262144, 0, 131078, 262144, 0, 131079, 262144, 0, 131080, 262144, 0, 131081, 262144, 0, 131082, 262144, 0, 131083, 262144, 0, 131084, 262144, 0, 196620, 262144, 0, 196621, 262144, 0, 131085, 262144, 0, 262157, 262144, 0, 262156, 262144, 0, 262155, 262144, 0, 196619, 262144, 0, 196618, 262144, 0, 262154, 262144, 0, 262153, 262144, 0, 262152, 262144, 0, 262151, 262144, 0, 196614, 262144, 0, 196613, 262144, 0, 196612, 262144, 0, 196615, 262144, 0, 196616, 262144, 0, 196617, 262144, 0, 262149, 262144, 0, 262148, 262144, 0, 196611, 262144, 0, 196610, 262144, 0, 196609, 262144, 0, 196608, 262144, 0, 262143, 262144, 0, 262142, 262144, 0, 327678, 262144, 0, 327679, 262144, 0, 262144, 262144, 0, 262145, 262144, 0, 262146, 262144, 0, 262147, 262144, 0, 262150, 262144, 0, 327688, 262144, 0, 327689, 262144, 0, 327690, 262144, 0, 327691, 262144, 0, 327692, 262144, 0, 327693, 262144, 0, 327687, 262144, 0, 327686, 262144, 0, 327685, 262144, 0, 327684, 262144, 0, 327683, 262144, 0, 327682, 262144, 0, 327681, 262144, 0, 327680, 262144, 0, 393215, 262144, 0, 393214, 262144, 0, 458751, 262144, 0, 393216, 262144, 0, 393217, 262144, 0, 393218, 262144, 0, 393219, 262144, 0, 393220, 262144, 0, 393221, 262144, 0, 393222, 262144, 0, 393223, 262144, 0, 393224, 262144, 0, 393225, 262144, 0, 393226, 262144, 0, 393227, 262144, 0, 393228, 262144, 0, 393229, 262144, 0, 458750, 262144, 0, 458765, 262144, 0, 458764, 262144, 0, 458763, 262144, 0, 458762, 262144, 0, 458761, 262144, 0, 458760, 262144, 0, 458759, 262144, 0, 458758, 262144, 0, 458757, 262144, 0, 458756, 262144, 0, 458755, 262144, 0, 458754, 262144, 0, 458753, 262144, 0, 458752, 262144, 0, 524287, 262144, 0, 524286, 262144, 0, 131090, 262144, 0, 131091, 262144, 0, 131092, 262144, 0, 131093, 262144, 0, 131094, 262144, 0, 196626, 262144, 0, 262162, 262144, 0, 262163, 262144, 0, 262164, 262144, 0, 196629, 262144, 0, 196628, 262144, 0, 196627, 262144, 0, 262165, 262144, 0, 196630, 262144, 0, 262166, 262144, 0, 327702, 262144, 0, 393238, 262144, 0, 458774, 262144, 0, 458773, 262144, 0, 458772, 262144, 0, 393235, 262144, 0, 327699, 262144, 0, 327701, 262144, 0, 393237, 262144, 0, 393236, 262144, 0, 327700, 262144, 0, 327698, 262144, 0, 458771, 262144, 0, 393234, 262144, 0, 458770, 262144, 0)
+layer_1/name = "PlayerBack"
+
+[node name="Player" parent="." unique_id=2127285340 instance=ExtResource("2_yqjtg")]
+position = Vector2(25, -36)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1353869311]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="Enemy1" parent="." unique_id=922115184 instance=ExtResource("5_iywne")]
+position = Vector2(310, -14)
+
+[node name="Water1" type="Node" parent="." unique_id=1605274764]
+
+[node name="TopWater" parent="Water1" unique_id=2136981456 instance=ExtResource("3_lnu2h")]
+position = Vector2(203, 0)
+
+[node name="TopWater2" parent="Water1" unique_id=239951139 instance=ExtResource("3_lnu2h")]
+position = Vector2(217, 0)
+
+[node name="TopWater3" parent="Water1" unique_id=377450718 instance=ExtResource("3_lnu2h")]
+position = Vector2(231, 0)
+
+[node name="TopWater4" parent="Water1" unique_id=1497636220 instance=ExtResource("3_lnu2h")]
+position = Vector2(245, 0)
+
+[node name="DownWater" parent="Water1" unique_id=842228947 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 14)
+
+[node name="DownWater2" parent="Water1" unique_id=2025142619 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 14)
+
+[node name="DownWater3" parent="Water1" unique_id=296474629 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 14)
+
+[node name="DownWater4" parent="Water1" unique_id=825405398 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 14)
+
+[node name="DownWater5" parent="Water1" unique_id=952423883 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 28)
+
+[node name="DownWater6" parent="Water1" unique_id=1598086072 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 28)
+
+[node name="DownWater7" parent="Water1" unique_id=990520128 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 28)
+
+[node name="DownWater8" parent="Water1" unique_id=1738947950 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 28)
+
+[node name="DownWater9" parent="Water1" unique_id=1267682109 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 42)
+
+[node name="DownWater10" parent="Water1" unique_id=2130787920 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 42)
+
+[node name="DownWater11" parent="Water1" unique_id=1527016575 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 42)
+
+[node name="DownWater12" parent="Water1" unique_id=488315273 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 42)
+
+[node name="DownWater13" parent="Water1" unique_id=2023105534 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 56)
+
+[node name="DownWater14" parent="Water1" unique_id=716092428 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 56)
+
+[node name="DownWater15" parent="Water1" unique_id=692283356 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 56)
+
+[node name="DownWater16" parent="Water1" unique_id=1348468547 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 56)
+
+[node name="DownWater17" parent="Water1" unique_id=1230035536 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 70)
+
+[node name="DownWater18" parent="Water1" unique_id=127057799 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 70)
+
+[node name="DownWater19" parent="Water1" unique_id=1920089961 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 70)
+
+[node name="DownWater20" parent="Water1" unique_id=951873732 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 70)
+
+[node name="DownWater21" parent="Water1" unique_id=135877717 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 84)
+
+[node name="DownWater22" parent="Water1" unique_id=259480287 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 84)
+
+[node name="DownWater23" parent="Water1" unique_id=1100138642 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 84)
+
+[node name="DownWater24" parent="Water1" unique_id=290715973 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 84)
+
+[node name="DownWater25" parent="Water1" unique_id=1268916568 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 98)
+
+[node name="DownWater26" parent="Water1" unique_id=339672661 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 98)
+
+[node name="DownWater27" parent="Water1" unique_id=930649124 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 98)
+
+[node name="DownWater28" parent="Water1" unique_id=526920897 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 98)
+
+[node name="DownWater29" parent="Water1" unique_id=563809614 instance=ExtResource("4_lbhrr")]
+position = Vector2(245, 112)
+
+[node name="DownWater30" parent="Water1" unique_id=1828323907 instance=ExtResource("4_lbhrr")]
+position = Vector2(231, 112)
+
+[node name="DownWater31" parent="Water1" unique_id=713623049 instance=ExtResource("4_lbhrr")]
+position = Vector2(217, 112)
+
+[node name="DownWater32" parent="Water1" unique_id=1360354430 instance=ExtResource("4_lbhrr")]
+position = Vector2(203, 112)
+
+[node name="KillZone" parent="." unique_id=173741741 instance=ExtResource("2_p57ef")]
+position = Vector2(13, 57)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1846893669]
+position = Vector2(7, 55)
+shape = SubResource("WorldBoundaryShape2D_u5sy4")

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bur2n4be10y0p"]
+
+[ext_resource type="Script" uid="uid://dc056t6hxr4eg" path="res://scripts/enemy.gd" id="1_clqa5"]
+[ext_resource type="Texture2D" uid="uid://b571t54o7d15f" path="res://assets/Sprites/tilemap/tilemap-characters.png" id="2_wfnme"]
+[ext_resource type="PackedScene" uid="uid://bosjvhvngg75t" path="res://scenes/hit_zone.tscn" id="3_4ra3w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i568c"]
+atlas = ExtResource("2_wfnme")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nswyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i568c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d4mff"]
+radius = 9.0
+height = 22.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
+size = Vector2(26, 20)
+
+[node name="Enemy" type="AnimatableBody2D" unique_id=922115184]
+script = ExtResource("1_clqa5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=332131096]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_nswyq")
+autoplay = "default"
+
+[node name="left" type="RayCast2D" parent="." unique_id=554915659]
+position = Vector2(0, -12)
+target_position = Vector2(-13, 0)
+
+[node name="right" type="RayCast2D" parent="." unique_id=56574693]
+position = Vector2(0, -12)
+target_position = Vector2(13, 0)
+
+[node name="down_right" type="RayCast2D" parent="." unique_id=1362927437]
+position = Vector2(10, -12)
+target_position = Vector2(0, 12)
+
+[node name="down_left" type="RayCast2D" parent="." unique_id=1882414193]
+position = Vector2(-10, -12)
+target_position = Vector2(0, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2058706253]
+position = Vector2(0, -11)
+shape = SubResource("CapsuleShape2D_d4mff")
+
+[node name="HitZone" parent="." unique_id=18151119 instance=ExtResource("3_4ra3w")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitZone" unique_id=1252667599]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_5uy6h")

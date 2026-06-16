@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://d20ba87xddb00"]
+
+[ext_resource type="Texture2D" uid="uid://k8cwl0gb2tg8" path="res://assets/Sprites/tilemap/tilemap.png" id="1_knjic"]
+[ext_resource type="PackedScene" uid="uid://cougm1pqdqfuh" path="res://scenes/Water/water.tscn" id="2_o5reb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knjic"]
+atlas = ExtResource("1_knjic")
+region = Rect2(249, 21, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5reb"]
+atlas = ExtResource("1_knjic")
+region = Rect2(249, 40, 14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h3uwq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knjic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5reb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgn3t"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3uwq"]
+size = Vector2(14, 14)
+
+[node name="TopWater" type="Area2D" unique_id=2136981456]
+modulate = Color(1, 1, 1, 0.5882353)
+z_index = 6
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1218212658]
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_h3uwq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.9047098
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1685036530]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_dgn3t")
+
+[node name="water" parent="." unique_id=1307850056 instance=ExtResource("2_o5reb")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="water" unique_id=263943057]
+position = Vector2(-2, -7)
+shape = SubResource("RectangleShape2D_h3uwq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
